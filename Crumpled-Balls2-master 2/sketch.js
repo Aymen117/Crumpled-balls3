@@ -5,6 +5,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+var mouseDragged,mouseRealeased;
 var paperimage,dustbinimage
 function preload()
 {
@@ -12,7 +13,7 @@ paperimage=	loadImage("paper.png")
 dustbinimage = loadImage("dustbingreen.png");
 }
 
-function setup() {
+function setup() {                                                                                                                                                                                         
 	createCanvas(800, 700);
 
 	ballSprite=createSprite(200,200, 10,10);
@@ -24,7 +25,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	//Create the Bodies Here.
+
 	var options={
 		isStatic:false,
 		restitution:0.3,
